@@ -28,7 +28,7 @@ namespace Matrix.Sdk.Sample.Console
             var password = $"ed:{hexSignature}:{publicKeyHex}";
             string deviceId = publicKeyHex;
 
-            var baseAddress = new Uri("https://beacon-node-0.papers.tech:8448/");
+            var baseAddress = new Uri("https://sdktest.sending.me/");
             
             var loginRequest = new LoginRequest(baseAddress, hexId, password, deviceId);
 

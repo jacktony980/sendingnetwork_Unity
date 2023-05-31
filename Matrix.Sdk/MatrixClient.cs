@@ -65,10 +65,12 @@
             _eventService.BaseAddress = baseAddress;
             BaseAddress = baseAddress;
             
-            LoginResponse response = await _userService.LoginAsync(user, password, deviceId, _cts.Token);
+            // LoginResponse response = await _userService.LoginAsync(user, password, deviceId, _cts.Token);
 
-            UserId = response.UserId;
-            _accessToken = response.AccessToken;
+            // UserId = response.UserId;
+            // _accessToken = response.AccessToken;
+            UserId = "@sdn_db4f2cf56621d2e07c752dd4ea2a5c89c146a682:db4f2cf56621d2e07c752dd4ea2a5c89c146a682";
+            _accessToken = "UFES8H4QVHtd-P_gwLhUGao6SS63TvoY2qY4W7RFYlI";
 
             _pollingService.Init(baseAddress, _accessToken);
 

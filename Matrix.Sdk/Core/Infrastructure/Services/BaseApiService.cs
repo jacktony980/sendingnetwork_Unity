@@ -17,7 +17,7 @@ namespace Matrix.Sdk.Core.Infrastructure.Services
             _httpClientFactory = httpClientFactory;
         }
 
-        protected virtual string ResourcePath => "_matrix/client/r0";
+        protected virtual string ResourcePath => "_api/client/r0";
 
 
         /// <summary>

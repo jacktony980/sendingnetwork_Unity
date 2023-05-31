@@ -1,5 +1,6 @@
 ﻿namespace Matrix.Sdk.Sample.Console
 {
+    using System;
     using System.Threading.Tasks;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
@@ -26,6 +27,7 @@
         
         private static async Task<int> Main(string[] args)
         {
+            Console.WriteLine("Hello, World!");
             IHost host = CreateHostBuilder().Build();
             
             SystemConsoleTheme theme = LoggerSetup.SetupTheme();
@@ -34,8 +36,8 @@
                 .WriteTo.Console(theme: theme)
                 .CreateLogger();
 
-            // await SimpleExample.Run();
-            await DependencyInjectionSample.Run(host.Services);
+            await Sample.Run();
+            // await DependencyInjectionSample.Run(host.Services);
 
             return 0;
         }

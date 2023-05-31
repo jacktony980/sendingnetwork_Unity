@@ -13,7 +13,7 @@ namespace Matrix.Sdk.Core.Infrastructure.Services
         {
         }
 
-        protected override string ResourcePath => "_matrix/client/versions";
+        protected override string ResourcePath => "_api/client/r0";
 
         public async Task<MatrixServerVersionsResponse> GetMatrixClientVersions(Uri address,
             CancellationToken cancellationToken)

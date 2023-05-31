@@ -29,9 +29,8 @@ namespace Matrix.Sdk.Sample.Console
             var password = $"ed:{hexSignature}:{publicKeyHex}";
             string deviceId = publicKeyHex;
 
-            var baseAddress = new Uri("https://beacon-node-0.papers.tech:8448/");
+            var baseAddress = new Uri("https://sdktest.sending.me/");
 
-            
             LoginRequest loginRequest = new LoginRequest(baseAddress, hexId, password, deviceId);
 
             return loginRequest;
@@ -106,9 +105,9 @@ namespace Matrix.Sdk.Sample.Console
             Console.WriteLine($"client.IsLoggedIn: {client.IsLoggedIn}");
             Console.WriteLine($"client.IsSyncing: {client.IsSyncing}");
             
-            // await client.GetJoinedRoomsIdsAsync();
-            // string roomId = string.Empty;
-            // await client.LeaveRoomAsync(roomId);
+            await client.GetJoinedRoomsIdsAsync();
+            string roomId = string.Empty;
+            await client.LeaveRoomAsync(roomId);
             
             Console.ReadLine();
 
